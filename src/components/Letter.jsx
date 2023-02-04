@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { Button, Form, Input, Upload, Cascader, message } from "antd";
+import { Button, Form, Input, message } from "antd";
 
 export default function Letter() {
   const [letterForm, setLetterForm] = useState({});
+  const [form] = Form.useForm();
 
   const handleForm = (e) => {
     setLetterForm({ ...letterForm, [e.target.name]: e.target.value });
@@ -11,6 +12,16 @@ export default function Letter() {
 
   const onFinishFailed = () => {
     message.error("Submission failed!");
+  };
+
+  const resetForm = () => {
+    form.setFieldsValue({
+      recipient: "",
+      message: "",
+      email: "",
+      address: "",
+      sender: "",
+    });
   };
 
   const onFinish = (values) => {
@@ -23,7 +34,8 @@ export default function Letter() {
     };
 
     fetch(
-      "http://localhost:5001/love-letter-api-cc/us-central1/api/letter/add",
+      //   "http://localhost:5001/love-letter-api-cc/us-central1/api/letter/add",
+      "https://love-letter-api-cc.web.app/letter/add",
       {
         method: "POST",
         headers: {
@@ -33,23 +45,24 @@ export default function Letter() {
       }
     )
       .then((response) => response.json())
-      .then((data) => setLetterForm(data))
+      .then((data) => message.success("Letter delivered! ❤️"))
       .catch(console.error);
+    resetForm();
   };
 
   return (
     <>
       <Form
+        form={form}
         className="add-letter"
         name="add-letter"
         layout="vertical"
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
-        autoComplete="off"
+        initialValues={{ remember: true }}
       >
         <Form.Item
           label="Dear"
-          labelAlign="right"
           name="recipient"
           onChange={handleForm}
           rules={[
@@ -58,7 +71,7 @@ export default function Letter() {
             },
           ]}
         >
-          <Input size="small" />
+          <Input />
         </Form.Item>
         <Form.Item
           label="Message"
@@ -72,45 +85,18 @@ export default function Letter() {
         >
           <Input />
         </Form.Item>
-        <Form.Item
-          label="email"
-          name="email"
-          onChange={handleForm}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
+        <Form.Item label="email" name="email" onChange={handleForm}>
           <Input />
         </Form.Item>
-        <Form.Item
-          label="address"
-          name="address"
-          onChange={handleForm}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
+        <Form.Item label="address" name="address" onChange={handleForm}>
           <Input />
         </Form.Item>
-        <Form.Item
-          label="With love,"
-          name="sender"
-          onChange={handleForm}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
+        <Form.Item label="With love," name="sender" onChange={handleForm}>
           <Input />
         </Form.Item>
 
         <Form.Item label="Button">
-          <Button htmlType="submit">Submit</Button>
+          <Button htmlType="submit">Send!</Button>
         </Form.Item>
       </Form>
     </>
