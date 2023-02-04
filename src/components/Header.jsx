@@ -1,5 +1,5 @@
 import "../styles/header.css"
 
 export default function Header() {
-  return <h1 className="header">💌 Love Letter 💌</h1>;
+  return <h1 className="header">💌 Send a Love Letter 💌</h1>;
 }
