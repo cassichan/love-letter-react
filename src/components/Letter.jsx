@@ -1,6 +1,6 @@
 import { useState } from "react";
-
 import { Button, Form, Input, message } from "antd";
+import "../styles/letter.css";
 
 export default function Letter() {
   const [letterForm, setLetterForm] = useState({});
@@ -56,48 +56,55 @@ export default function Letter() {
         form={form}
         className="add-letter"
         name="add-letter"
-        layout="vertical"
+        layout="horizontal"
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         initialValues={{ remember: true }}
       >
-        <Form.Item
-          label="Dear"
-          name="recipient"
-          onChange={handleForm}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Message"
-          name="message"
-          onChange={handleForm}
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item label="email" name="email" onChange={handleForm}>
-          <Input />
-        </Form.Item>
-        <Form.Item label="address" name="address" onChange={handleForm}>
-          <Input />
-        </Form.Item>
-        <Form.Item label="With love," name="sender" onChange={handleForm}>
-          <Input />
-        </Form.Item>
-
-        <Form.Item label="Button">
-          <Button htmlType="submit">Send!</Button>
-        </Form.Item>
+        <div className="letter-message">
+          <Form.Item
+            className="form-item"
+            label="Dear"
+            name="recipient"
+            onChange={handleForm}
+            rules={[
+              {
+                required: true,
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            className="form-item"
+            label="Message"
+            name="message"
+            onChange={handleForm}
+            rules={[
+              {
+                required: true,
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item label="With love," name="sender" onChange={handleForm}>
+            <Input />
+          </Form.Item>
+        </div>
+        <div className="recipient-contact">
+          <Form.Item label="Email" name="email" onChange={handleForm}>
+            <Input />
+          </Form.Item>
+          <Form.Item label="Address" name="address" onChange={handleForm}>
+            <Input />
+          </Form.Item>
+        </div>
+        <div className="button-container">
+          <Form.Item label="Button">
+            <Button htmlType="submit">Send!</Button>
+          </Form.Item>
+        </div>
       </Form>
     </>
   );

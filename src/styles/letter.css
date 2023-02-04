@@ -1,0 +1,36 @@
+.add-letter {
+  width: 800px;
+  height: 500px;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-item {
+  border: none;
+  border-radius: 4%;
+  height: 1.9em;
+  padding: 0.7em;
+}
+
+.ant-form-item-label {
+  font-family: sans-serif;
+}
+
+:where(.css-dev-only-do-not-override-ixblex).ant-form-item
+  .ant-form-item-label
+  > label::after {
+  content: "";
+}
+
+.letter-message {
+  width: 200px;
+  height: 500px;
+}
+
+.recipient-contact {
+}
