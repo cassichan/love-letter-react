@@ -11,14 +11,23 @@
 }
 
 .form-item {
-  border: none;
-  border-radius: 4%;
-  height: 1.9em;
+  margin-right: 50px;
   padding: 0.7em;
 }
 
-.ant-form-item-label {
+.message {
+  margin-right: 100px;
+  margin-bottom: 60px;
+  margin-left: -25px;
+}
+
+.ant-input {
+  border: none;
   font-family: sans-serif;
+}
+
+.ant-form-item-label {
+  /* font-family: sans-serif; */
 }
 
 :where(.css-dev-only-do-not-override-ixblex).ant-form-item
@@ -28,9 +37,43 @@
 }
 
 .letter-message {
-  width: 200px;
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .recipient-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.stamp-container {
+  margin-bottom: 100px;
+}
+
+.stamp-img {
+  display: block;
+  max-width: 130px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.recipient-contact-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.stamp-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.stamp-container {
+  margin-bottom: 300px;
 }

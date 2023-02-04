@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button, Form, Input, message } from "antd";
 import "../styles/letter.css";
 
+const { TextArea } = Input;
+
 export default function Letter() {
   const [letterForm, setLetterForm] = useState({});
   const [form] = Form.useForm();
@@ -73,10 +75,10 @@ export default function Letter() {
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Cass" />
           </Form.Item>
           <Form.Item
-            className="form-item"
+            className="form-item message"
             label="Message"
             name="message"
             onChange={handleForm}
@@ -86,23 +88,44 @@ export default function Letter() {
               },
             ]}
           >
-            <Input />
+            <TextArea
+              className="form-item"
+              rows={7}
+              placeholder="You are a strong, intelligent woman with a huge heart. You are capable of anything you set your mind to. You do not have to be perfect to be loved and I love you just as you are. Please accept my letter ❤️"
+            />
           </Form.Item>
           <Form.Item label="With love," name="sender" onChange={handleForm}>
-            <Input />
+            <Input placeholder="Cass" />
           </Form.Item>
         </div>
         <div className="recipient-contact">
-          <Form.Item label="Email" name="email" onChange={handleForm}>
-            <Input />
-          </Form.Item>
-          <Form.Item label="Address" name="address" onChange={handleForm}>
-            <Input />
-          </Form.Item>
+          {/* <div className="stamp-container">
+            <img
+              className="stamp-img"
+              src="https://cdn.pixabay.com/photo/2014/04/02/17/04/red-307844_960_720.png"
+            ></img>
+          </div> */}
+          <div className="recipient-contact-items">
+            <Form.Item name="email" onChange={handleForm}>
+              <Input placeholder="cass@gmail.com" />
+            </Form.Item>
+            <Form.Item name="address" onChange={handleForm}>
+              <TextArea
+                placeholder="4520 Self Love Lane, Boca Raton, FL"
+                rows={2}
+              />
+            </Form.Item>
+          </div>
         </div>
-        <div className="button-container">
-          <Form.Item label="Button">
-            <Button htmlType="submit">Send!</Button>
+        <div className="stamp-btn-container">
+          <div className="stamp-container">
+            <img
+              className="stamp-img"
+              src="https://cdn.pixabay.com/photo/2014/04/02/17/04/red-307844_960_720.png"
+            ></img>
+          </div>
+          <Form.Item>
+            <Button htmlType="submit">Send! 📮</Button>
           </Form.Item>
         </div>
       </Form>
