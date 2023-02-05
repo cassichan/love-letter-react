@@ -76,7 +76,7 @@
   margin-bottom: 300px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .add-letter {
     height: 750px;
   }
@@ -100,7 +100,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .add-letter {
     max-width: 400px;
   }
