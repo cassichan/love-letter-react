@@ -111,6 +111,7 @@ export default function Letter() {
         <div className="stamp-btn-container">
           <div className="stamp-container">
             <img
+              alt="stamp"
               className="stamp-img"
               src="https://cdn.pixabay.com/photo/2014/04/02/17/04/red-307844_960_720.png"
             ></img>
