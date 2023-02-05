@@ -99,12 +99,6 @@ export default function Letter() {
           </Form.Item>
         </div>
         <div className="recipient-contact">
-          {/* <div className="stamp-container">
-            <img
-              className="stamp-img"
-              src="https://cdn.pixabay.com/photo/2014/04/02/17/04/red-307844_960_720.png"
-            ></img>
-          </div> */}
           <div className="recipient-contact-items">
             <Form.Item name="email" onChange={handleForm}>
               <Input placeholder="cass@gmail.com" />

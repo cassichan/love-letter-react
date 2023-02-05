@@ -1,6 +1,6 @@
 .add-letter {
-  width: 800px;
-  height: 500px;
+  /* width: 800px;
+  height: 500px; */
   background-color: #f7f7f7;
   margin: 0 auto;
   border-radius: 2%;
@@ -76,4 +76,34 @@
 
 .stamp-container {
   margin-bottom: 300px;
+}
+
+@media (max-width: 768px) {
+  .add-letter {
+    height: 750px;
+    width: 600px;
+  }
+  #add-letter {
+    flex-direction: column;
+  }
+
+  .stamp-container {
+    margin-bottom: 0;
+  }
+  .stamp-btn-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  .stamp-img {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .add-letter {
+    width: 400px;
+  }
+  .recipient-contact {
+    align-items: start;
+  }
 }
