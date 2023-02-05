@@ -32,6 +32,10 @@
   content: '';
 }
 
+:where(.css-ixblex).ant-form-item .ant-form-item-label > label::after {
+  content: '';
+}
+
 .letter-message {
   display: flex;
   flex-direction: column;
