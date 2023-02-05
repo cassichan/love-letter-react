@@ -79,7 +79,6 @@
 @media (max-width: 768px) {
   .add-letter {
     height: 750px;
-    width: 600px;
   }
   #add-letter {
     flex-direction: column;
@@ -95,16 +94,17 @@
   .stamp-img {
     display: none;
   }
-}
 
-@media (max-width: 450px) {
-  .add-letter {
-    width: 400px;
-  }
-  #add-letter {
-    margin-left: 30px;
-  }
   .recipient-contact {
     align-items: start;
+  }
+}
+
+@media (max-width: 400px) {
+  .add-letter {
+    max-width: 400px;
+  }
+  #add-letter {
+    margin: 20px;
   }
 }
