@@ -1,7 +1,7 @@
-import Header from "./components/Header";
-import Letter from "./components/Letter";
-import Footer from "./components/Footer";
-import "./App.css";
+import Header from './components/Header'
+import Letter from './components/Letter'
+import Footer from './components/Footer'
+import './App.css'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Letter />
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

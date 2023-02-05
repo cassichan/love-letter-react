@@ -24,14 +24,12 @@
   font-family: sans-serif;
 }
 
-:where(.css-dev-only-do-not-override-ixblex).ant-form-item
-  .ant-form-item-label
-  > label::after {
-  content: "";
+:where(.css-dev-only-do-not-override-ixblex).ant-form-item .ant-form-item-label > label::after {
+  content: '';
 }
 
 .ant-form-item-label {
-  content: "";
+  content: '';
 }
 
 .letter-message {

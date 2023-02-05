@@ -1,56 +1,56 @@
-import { useState } from "react";
-import { Button, Form, Input, message } from "antd";
-import "../styles/letter.css";
+import { useState } from 'react'
+import { Button, Form, Input, message } from 'antd'
+import '../styles/letter.css'
 
-const { TextArea } = Input;
+const { TextArea } = Input
 
 export default function Letter() {
-  const [letterForm, setLetterForm] = useState({});
-  const [form] = Form.useForm();
+  const [letterForm, setLetterForm] = useState({})
+  const [form] = Form.useForm()
 
-  const handleForm = (e) => {
-    setLetterForm({ ...letterForm, [e.target.name]: e.target.value });
-  };
+  const handleForm = e => {
+    setLetterForm({ ...letterForm, [e.target.name]: e.target.value })
+  }
 
   const onFinishFailed = () => {
-    message.error("Submission failed!");
-  };
+    message.error('Submission failed!')
+  }
 
   const resetForm = () => {
     form.setFieldsValue({
-      recipient: "",
-      message: "",
-      email: "",
-      address: "",
-      sender: "",
-    });
-  };
+      recipient: '',
+      message: '',
+      email: '',
+      address: '',
+      sender: '',
+    })
+  }
 
-  const onFinish = (values) => {
+  const onFinish = values => {
     const newLetter = {
       recipient: values.recipient,
       sender: values.sender,
       message: values.message,
       address: values.address,
       email: values.email,
-    };
+    }
 
     fetch(
       //   "http://localhost:5001/love-letter-api-cc/us-central1/api/letter/add",
-      "https://love-letter-api-cc.web.app/letter/add",
+      'https://love-letter-api-cc.web.app/letter/add',
       {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(newLetter),
       }
     )
-      .then((response) => response.json())
-      .then((data) => message.success("Letter delivered! ❤️"))
-      .catch(console.error);
-    resetForm();
-  };
+      .then(response => response.json())
+      .then(data => message.success('Letter delivered! ❤️'))
+      .catch(console.error)
+    resetForm()
+  }
 
   return (
     <>
@@ -104,10 +104,7 @@ export default function Letter() {
               <Input placeholder="cass@gmail.com" />
             </Form.Item>
             <Form.Item name="address" onChange={handleForm}>
-              <TextArea
-                placeholder="4520 Self Love Lane, Boca Raton, FL"
-                rows={2}
-              />
+              <TextArea placeholder="4520 Self Love Lane, Boca Raton, FL" rows={2} />
             </Form.Item>
           </div>
         </div>
@@ -124,5 +121,5 @@ export default function Letter() {
         </div>
       </Form>
     </>
-  );
+  )
 }
