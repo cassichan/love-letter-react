@@ -18,7 +18,7 @@ export default function OneLetter({ letter, setLetter }) {
         }
       >
         <div className="card-text">
-          <Meta title={letter.recipient} description={[`${letter.message}, ${letter.sender}`]} />
+          <Meta title={`To: ${letter.recipient}`} description={letter.message} />
         </div>
       </Card>
     </div>

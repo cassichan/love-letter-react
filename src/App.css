@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Inconsolata:wght@400;800&family=Manrope:wght@600&family=Montserrat:wght@100;400&family=Nanum+Gothic:wght@700&family=Open+Sans:ital,wght@0,300;1,400&family=Roboto:wght@400;500&display=swap');
+
 *,
 *::before,
 *::after {
@@ -22,3 +24,18 @@
   justify-content: space-around;
   padding: 2rem;
 }
+
+.ant-btn-link {
+  color: #ffff;
+  font-size: 20px;
+  font-family: 'Manrope';
+  padding: 20px;
+  text-decoration: underline !important;
+}
+
+:hover .ant-btn-link {
+  color: #ffff !important;
+}
+
+
+/* #30d5c8 */
