@@ -124,7 +124,7 @@ export default function Letter() {
       </Form>
       <Link to={`/`}>
         <Button type="link" htmlType="button">
-          View all love letters 😍
+          View all love letters 😍 -> 
         </Button>
       </Link>
     </>

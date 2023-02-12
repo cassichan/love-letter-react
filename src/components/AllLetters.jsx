@@ -29,7 +29,7 @@ export default function AllLetters() {
       </section>
       <Link to={`/addletter`}>
         <Button type="link" htmlType="button">
-          Send a love letter 😘
+          Send a love letter 😘 -> 
         </Button>
       </Link>
     </section>
