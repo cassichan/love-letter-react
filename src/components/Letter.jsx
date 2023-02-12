@@ -76,7 +76,7 @@ export default function Letter() {
               },
             ]}
           >
-            <Input placeholder="Cass" />
+            <Input placeholder="name" />
           </Form.Item>
           <Form.Item
             className="form-item message"
@@ -92,20 +92,20 @@ export default function Letter() {
             <TextArea
               className="form-item"
               rows={7}
-              placeholder="You are a strong, intelligent woman with a huge heart. You are capable of anything you set your mind to. You do not have to be perfect to be loved and I love you just as you are. Please accept my letter ❤️"
+              placeholder="You must be a meta tag 'cause I can't get you out of my <head> ❤️"
             />
           </Form.Item>
           <Form.Item label="With love," name="sender" onChange={handleForm}>
-            <Input placeholder="Cass" />
+            <Input placeholder="name" />
           </Form.Item>
         </div>
         <div className="recipient-contact">
           <div className="recipient-contact-items">
             <Form.Item name="email" onChange={handleForm}>
-              <Input placeholder="cass@gmail.com" />
+              <Input placeholder="valentine@gmail.com" />
             </Form.Item>
             <Form.Item name="address" onChange={handleForm}>
-              <TextArea placeholder="4520 Self Love Lane, Boca Raton, FL" rows={2} />
+              <TextArea placeholder="4520 Love Lane, Boca Raton, FL" rows={2} />
             </Form.Item>
           </div>
         </div>
