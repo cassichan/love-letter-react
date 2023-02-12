@@ -27,7 +27,7 @@ export default function AllLetters() {
             <OneLetter key={letter.id} letter={letter} setLetter={setLetter} />
           ))}
       </section>
-      <Link to={`/addletter`}>
+      <Link to={`/`}>
         <Button type="link" htmlType="button">
           Send a love letter 😘 -> 
         </Button>
