@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Form, Input, message } from 'antd'
 import '../styles/letter.css'
 
@@ -121,6 +122,11 @@ export default function Letter() {
           </Form.Item>
         </div>
       </Form>
+      <Link to={`/`}>
+        <Button type="link" htmlType="button">
+          View all love letters 😍
+        </Button>
+      </Link>
     </>
   )
 }

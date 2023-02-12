@@ -1,15 +1,15 @@
-import Header from './components/Header'
-import Letter from './components/Letter'
-import Footer from './components/Footer'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import AddLetterPage from './scenes/AddLetterPage.jsx'
+import AllLettersPage from './scenes/AllLettersPage.jsx'
 import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Letter />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/addletter" element={<AddLetterPage />}></Route>
+      <Route path="/" element={<AllLettersPage />}></Route>
+    </Routes>
   )
 }
 
