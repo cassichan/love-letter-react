@@ -5,7 +5,7 @@ import OneLetter from '../components/OneLetter.jsx'
 import '../App.css'
 
 export default function AllLetters() {
-  const [letter, setLetter] = useState('')
+  const [setLetter] = useState('')
   const [letters, setLetters] = useState([])
   useEffect(() => {
     fetch(
@@ -29,7 +29,7 @@ export default function AllLetters() {
       </section>
       <Link to={`/`}>
         <Button type="link" htmlType="button">
-          Send a love letter 😘 -> 
+          Send a love letter 😘 -&gt;
         </Button>
       </Link>
     </section>

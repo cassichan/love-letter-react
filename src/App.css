@@ -21,8 +21,11 @@
   display: flex;
   direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: center;
+}
+
+.ant-card {
+  margin: 2rem;
 }
 
 .ant-btn-link {
@@ -36,6 +39,3 @@
 :hover .ant-btn-link {
   color: #ffff !important;
 }
-
-
-/* #30d5c8 */

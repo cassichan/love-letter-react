@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Button, Form, Input, message } from 'antd'
 import '../styles/letter.css'
 
@@ -8,8 +8,6 @@ const { TextArea } = Input
 export default function Letter() {
   const [letterForm, setLetterForm] = useState({})
   const [form] = Form.useForm()
-
-  const navigate = useNavigate()
 
   const handleForm = e => {
     setLetterForm({ ...letterForm, [e.target.name]: e.target.value })
@@ -50,8 +48,7 @@ export default function Letter() {
       }
     )
       .then(response => response.json())
-      .then(data => message.success('Letter delivered! ❤️'))
-      // .then(navigate("/allletters"))
+      .then(message.success('Letter delivered! ❤️'))
       .catch(console.error)
     resetForm()
   }
@@ -125,9 +122,9 @@ export default function Letter() {
           </Form.Item>
         </div>
       </Form>
-      <Link to={`/allletters`}>
+      <Link to={`/all-letters`}>
         <Button type="link" htmlType="button">
-          View all love letters 😍 -> 
+          View all love letters 😍 -&gt;
         </Button>
       </Link>
     </>
