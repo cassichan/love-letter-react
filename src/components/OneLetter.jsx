@@ -1,7 +1,7 @@
 import { Card } from 'antd'
 const { Meta } = Card
 
-export default function OneLetter({ letter, setLetter }) {
+export default function OneLetter({ letter }) {
   return (
     <div>
       <Card
