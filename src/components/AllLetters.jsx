@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from 'antd'
+import { Button, Spin } from 'antd'
 import OneLetter from '../components/OneLetter.jsx'
 import '../App.css'
 
@@ -23,7 +23,7 @@ export default function AllLetters() {
   }, [setLetters])
 
   if (isLoading) {
-    return <h1>Loading... please wait</h1>
+    return <Spin/>
   }
   return (
     <section className="card-section">
