@@ -9,6 +9,7 @@
 .header-container {
   display: flex;
   justify-content: center;
+
 }
 
 @media (max-width: 900px) {

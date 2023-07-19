@@ -38,9 +38,10 @@ export default function AllLetters() {
       </section>
       <Link to={`/`}>
         <Button type="link" htmlType="button">
-          Send a love letter 😘 -&gt;
+          Send a love letter -&gt;
         </Button>
       </Link>
+      😘
     </section>
   )
 }

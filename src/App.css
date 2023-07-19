@@ -29,8 +29,12 @@
   height: 400px;
 }
 
-:hover .ant-card  {
+:hover .ant-card {
   cursor: default;
+}
+
+.ant-btn > span {
+  display: inline;
 }
 
 .ant-btn-link {
@@ -42,5 +46,5 @@
 }
 
 :hover .ant-btn-link {
-  color: #ffff !important;
+  color: #ffffff !important;
 }

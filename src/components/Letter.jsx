@@ -124,9 +124,10 @@ export default function Letter() {
       </Form>
       <Link to={`/all-letters`}>
         <Button type="link" htmlType="button">
-          View all love letters 😍 -&gt;
+          View all love letters -&gt;
         </Button>
       </Link>
+      😍
     </>
   )
 }
