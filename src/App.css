@@ -29,6 +29,10 @@
   height: 400px;
 }
 
+:hover .ant-card  {
+  cursor: default;
+}
+
 .ant-btn-link {
   color: #ffff;
   font-size: 20px;
