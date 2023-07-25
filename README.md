@@ -1,12 +1,15 @@
-# Getting Started with Create React App
+# Love Thy Neighbor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React project using Ant Design that connects to an Express/Node API in order to view and send love letters 🥰
 
-## Available Scripts
 
-In the project directory, you can run:
+You can send a letter to a loved one, or even to yourself. This was built for Valentine's Day!
 
-### `npm start`
+[Live demo](https://github.com/facebook/create-react-app)
+
+## Preview
+
+![Desktop view](./public/love_thy_neighbor.png)
 
 ### Credits
-Adapted from https://codepen.io/amberlimshin/pen/xgMqJM
+CSS Adapted from https://codepen.io/amberlimshin/pen/xgMqJM
